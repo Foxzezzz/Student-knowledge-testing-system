@@ -5,12 +5,12 @@ namespace KnowledgeTesting.Desktop;
 
 public partial class MainWindow : Window
 {
-    private TestSession session = null!;
+    private TestSession session = new(new DemoQuestionBank());
 
     public MainWindow()
     {
         InitializeComponent();
-        StartNewTest();
+        ShowQuestion();
     }
 
     private void StartNewTest()
