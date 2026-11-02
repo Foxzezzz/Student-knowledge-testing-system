@@ -15,6 +15,8 @@ public sealed class TestSession
         questions = source.ToArray();
         if (questions.Length == 0 || questions.Any(question => question is null))
             throw new ArgumentException("Банк должен содержать вопросы.", nameof(bank));
+        if (questions.Select(question => question.Id).Distinct(StringComparer.OrdinalIgnoreCase).Count() != questions.Length)
+            throw new ArgumentException("Идентификаторы вопросов должны быть уникальны.", nameof(bank));
         Trace.TraceInformation("Test started: questionCount={0}", questions.Length);
     }
 
