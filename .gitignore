@@ -1,0 +1,30 @@
+# Результаты сборки и тестирования
+**/bin/
+**/obj/
+TestResults/
+*.trx
+coverage/
+
+# Пользовательские настройки сред разработки
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Секреты и локальная конфигурация
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.key
+appsettings.*.local.json
+
+# Временные файлы
+*.log
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
